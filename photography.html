@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mason Campbell - Photography</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">MC</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
+                <li><a href="writing.html" class="nav-link">Writing</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="photography.html" class="nav-link active">Photography</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <h1 class="page-title">Photography</h1>
+
+        <div class="gallery-grid">
+            <div class="gallery-item wide">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Mountain landscape">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600" alt="Forest path">
+            </div>
+            <div class="gallery-item tall">
+                <img src="https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=600" alt="Architecture">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600" alt="Nature">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600" alt="Sunset">
+            </div>
+            <div class="gallery-item wide">
+                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800" alt="City skyline">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=600" alt="Mountains">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=600" alt="Minimalist">
+            </div>
+            <div class="gallery-item tall">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600" alt="Urban">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=600" alt="Desert">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=600" alt="Reflection">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600" alt="Peak">
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Mason Campbell. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Lightbox functionality
+        const galleryItems = document.querySelectorAll('.gallery-item img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                lightboxImg.src = item.src;
+                lightbox.classList.add('active');
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+        }
+
+        // Close lightbox on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
