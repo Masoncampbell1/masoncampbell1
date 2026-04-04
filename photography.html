@@ -3,65 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mason Campbell - Photography</title>
+    <title>Mason Campbell — Photography</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">MC</a>
+            <a href="index.html" class="nav-logo">Mason Campbell</a>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="resume.html" class="nav-link">Resume</a></li>
-                <li><a href="writing.html" class="nav-link">Writing</a></li>
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
                 <li><a href="photography.html" class="nav-link active">Photography</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="main-content">
+    <div class="page-header">
+        <p class="page-eyebrow">Visual</p>
         <h1 class="page-title">Photography</h1>
+    </div>
 
+    <div class="page-body" style="padding-top: 2rem; padding-left: 0; padding-right: 0; max-width: 100%;">
         <div class="gallery-grid">
             <div class="gallery-item wide">
-                <img src="images/1.JPG" alt="Photo 1">
+                <img src="images/1.JPG" alt="Photo">
             </div>
             <div class="gallery-item">
-                <img src="images/3.JPG" alt="Photo 3">
+                <img src="images/3.JPG" alt="Photo">
             </div>
             <div class="gallery-item tall">
-                <img src="images/4.JPG" alt="Photo 4">
+                <img src="images/4.JPG" alt="Photo">
             </div>
             <div class="gallery-item">
-                <img src="images/5.JPG" alt="Photo 5">
+                <img src="images/5.JPG" alt="Photo">
             </div>
             <div class="gallery-item">
-                <img src="images/6.JPG" alt="Photo 6">
+                <img src="images/6.JPG" alt="Photo">
             </div>
             <div class="gallery-item wide">
-                <img src="images/7.JPG" alt="Photo 7">
+                <img src="images/7.JPG" alt="Photo">
             </div>
             <div class="gallery-item">
-                <img src="images/8.JPG" alt="Photo 8">
+                <img src="images/8.JPG" alt="Photo">
             </div>
             <div class="gallery-item">
-                <img src="images/9.JPG" alt="Photo 9">
+                <img src="images/9.JPG" alt="Photo">
             </div>
             <div class="gallery-item tall">
-                <img src="images/10.jpg" alt="Photo 10">
+                <img src="images/10.jpg" alt="Photo">
             </div>
             <div class="gallery-item">
-                <img src="images/11.jpg" alt="Photo 11">
+                <img src="images/11.jpg" alt="Photo">
             </div>
             <div class="gallery-item">
-                <img src="images/12.jpg" alt="Photo 12">
+                <img src="images/12.jpg" alt="Photo">
             </div>
             <div class="gallery-item">
-                <img src="images/13.jpg" alt="Photo 13">
+                <img src="images/13.jpg" alt="Photo">
             </div>
         </div>
-    </main>
+    </div>
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
@@ -72,11 +75,30 @@
     </div>
 
     <footer class="footer">
-        <p>&copy; 2024 Mason Campbell. All rights reserved.</p>
+        <p>&copy; 2025 Mason Campbell</p>
     </footer>
 
+    <!-- Spotify Widget -->
+    <div class="spotify-widget">
+        <button class="spotify-toggle" onclick="toggleSpotify()" aria-label="Toggle music player">
+            <span class="spotify-dot"></span>
+            <span>Now Playing</span>
+        </button>
+        <div class="spotify-embed" id="spotifyEmbed">
+            <iframe
+                src="https://open.spotify.com/embed/playlist/1gNgru36DnhHGredw99iIs?utm_source=generator&theme=0"
+                width="300"
+                height="80"
+                frameborder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
     <script>
-        // Lightbox functionality
+        // Lightbox
         const galleryItems = document.querySelectorAll('.gallery-item img');
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
@@ -92,19 +114,22 @@
             lightbox.classList.remove('active');
         }
 
-        // Close lightbox on background click
         lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                closeLightbox();
-            }
+            if (e.target === lightbox) closeLightbox();
         });
 
-        // Close lightbox with Escape key
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeLightbox();
-            }
+            if (e.key === 'Escape') closeLightbox();
         });
+
+        // Spotify
+        function toggleSpotify() {
+            const btn = document.querySelector('.spotify-toggle');
+            const embed = document.getElementById('spotifyEmbed');
+            embed.classList.toggle('open');
+            btn.classList.toggle('playing');
+        }
     </script>
+
 </body>
 </html>

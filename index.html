@@ -3,76 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mason Campbell - Home</title>
+    <title>Mason Campbell</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">MC</a>
+            <a href="index.html" class="nav-logo">Mason Campbell</a>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="resume.html" class="nav-link">Resume</a></li>
-                <li><a href="writing.html" class="nav-link">Writing</a></li>
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
                 <li><a href="photography.html" class="nav-link">Photography</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section with Background Image -->
-    <section class="hero-image-section">
-        <div class="hero-overlay">
-            <div class="hero-content">
-                <h1 class="hero-title">Mason Campbell</h1>
-                <p class="hero-subtitle">Building systems—digital and physical.</p>
-            </div>
-        </div>
+    <section class="hero">
+        <p class="hero-eyebrow">Columbus, Ohio</p>
+        <h1 class="hero-name">Mason<br>Campbell</h1>
+        <hr class="hero-rule">
+        <p class="hero-tagline">Building systems — digital and physical. Relationship-first, data-driven, always curious.</p>
     </section>
 
-    <!-- Preview Sections -->
-    <main class="preview-sections">
-        
-        <!-- Writing Section -->
-        <section class="preview-section">
-            <div class="preview-content">
-                <h2>Writing</h2>
-                <p>Thoughts on lifes intersection of the digital and physical world, explored through essays and reflections on technology and craft.</p>
-                <a href="writing.html" class="preview-button">Read My Writing</a>
-            </div>
-        </section>
-
-        <!-- Photography Section -->
-        <section class="preview-section alt-bg">
-            <div class="preview-content">
-                <h2>Photography</h2>
-                <p>Capturing moments and landscapes through the lens. A curated collection of visual stories from travels, nature, and urban exploration.</p>
-                <a href="photography.html" class="preview-button">View Gallery</a>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section class="preview-section">
-            <div class="preview-content">
-                <h2>Projects</h2>
-                <p>. Check out my latest work where self-driven projects go from concept to reality.</p>
-                <a href="projects.html" class="preview-button">Explore Projects</a>
-            </div>
-        </section>
-
-        <!-- Resume Section -->
-        <section class="preview-section alt-bg">
-            <div class="preview-content">
-                <h2>Resume</h2>
-                <p>Experience in project managemet data management, and CRM Systems. View my professional background, skills, and education.</p>
-                <a href="resume.html" class="preview-button">View Resume</a>
-            </div>
-        </section>
-
-    </main>
+    <div class="section-list">
+        <a href="resume.html" class="section-row">
+            <span class="section-number">01</span>
+            <span class="section-title">Resume</span>
+            <span class="section-desc">Professional experience in CRM systems, data workflows, and stakeholder relationships.</span>
+            <span class="section-arrow">→</span>
+        </a>
+        <a href="projects.html" class="section-row">
+            <span class="section-number">02</span>
+            <span class="section-title">Projects</span>
+            <span class="section-desc">Self-driven work — from climbing walls to product design — concept to reality.</span>
+            <span class="section-arrow">→</span>
+        </a>
+        <a href="photography.html" class="section-row">
+            <span class="section-number">03</span>
+            <span class="section-title">Photography</span>
+            <span class="section-desc">Visual stories from travels, nature, and time spent outside.</span>
+            <span class="section-arrow">→</span>
+        </a>
+    </div>
 
     <footer class="footer">
-        <p>&copy; 2025 Mason Campbell. All rights reserved.</p>
+        <p>&copy; 2025 Mason Campbell</p>
     </footer>
+
+    <!-- Spotify Widget -->
+    <div class="spotify-widget">
+        <button class="spotify-toggle" onclick="toggleSpotify()" aria-label="Toggle music player">
+            <span class="spotify-dot"></span>
+            <span>Now Playing</span>
+        </button>
+        <div class="spotify-embed" id="spotifyEmbed">
+            <iframe
+                src="https://open.spotify.com/embed/playlist/1gNgru36DnhHGredw99iIs?utm_source=generator&theme=0"
+                width="300"
+                height="80"
+                frameborder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        function toggleSpotify() {
+            const btn = document.querySelector('.spotify-toggle');
+            const embed = document.getElementById('spotifyEmbed');
+            embed.classList.toggle('open');
+            btn.classList.toggle('playing');
+        }
+    </script>
+
 </body>
 </html>

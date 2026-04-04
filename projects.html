@@ -3,72 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mason Campbell - Projects</title>
+    <title>Mason Campbell — Projects</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">MC</a>
+            <a href="index.html" class="nav-logo">Mason Campbell</a>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="resume.html" class="nav-link">Resume</a></li>
-                <li><a href="writing.html" class="nav-link">Writing</a></li>
                 <li><a href="projects.html" class="nav-link active">Projects</a></li>
                 <li><a href="photography.html" class="nav-link">Photography</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="main-content">
+    <div class="page-header">
+        <p class="page-eyebrow">Work</p>
         <h1 class="page-title">Projects</h1>
+    </div>
 
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    [Project Image]
+    <div class="page-body">
+        <div class="projects-list">
+
+            <div class="project-item">
+                <div>
+                    <p class="project-num">01</p>
+                    <h3>At-Home Climbing Wall</h3>
+                    <p>Building an at-home climbing wall turns an abstract idea into a physical commitment — requiring planning, problem-solving, and a willingness to learn through trial and error. Each panel, hold placement, and angle forces intentional decisions that mirror the process of designing any system meant to be used and refined over time.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">FreeCAD</span>
+                        <span class="project-tag">Fabrication</span>
+                        <span class="project-tag">Physical Build</span>
+                    </div>
+                    <a href="#" class="project-link-btn">View Project →</a>
                 </div>
-                <div class="project-content">
-                    <h3>At Home Climbing Wall</h3>
-                    <p class="project-description">
-                     Building an at-home climbing wall turns an abstract idea into a physical commitment, requiring planning, problem-solving, and a willingness to learn through trial and error. Each panel, hold placement, and angle forces intentional decisions that mirror the process of designing any system meant to be used and refined over time.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Free CAD</span>
-                        <span class="tech-tag">Powertools</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">View Project →</a>
-                        <a href="#" class="project-link">GitHub →</a>
-                    </div>
+                <div>
+                    <span class="project-status">In Progress</span>
                 </div>
             </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    [Project Image]
+            <div class="project-item">
+                <div>
+                    <p class="project-num">02</p>
+                    <h3>Eventiiv</h3>
+                    <p class="project-tagline">Turn every event into donor intelligence.</p>
+                    <p>Advancement teams run hundreds of events every year and lose almost all the data from them. Eventiiv is an AI-native, end-to-end event management platform built for nonprofits and higher education — covering the full six-phase event lifecycle from planning through post-event intelligence. No competitor in the advancement space covers all six. Most stop at registration.</p>
+                    <p style="margin-top: -0.75rem;">The platform combines AI-assisted event creation, structured donor data capture at registration, QR-based check-in with staff interaction tagging, post-event stewardship automation, and an intelligence layer that learns from every event your team runs.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Next.js</span>
+                        <span class="project-tag">TypeScript</span>
+                        <span class="project-tag">Azure PostgreSQL</span>
+                        <span class="project-tag">Anthropic API</span>
+                        <span class="project-tag">Tailwind CSS</span>
+                        <span class="project-tag">Vercel</span>
+                    </div>
+                    <a href="#" class="project-link-btn">View Project →</a>
+                    <img src="images/eventiiv-screenshot.png" alt="Eventiiv screenshot" class="project-image">
                 </div>
-                <div class="project-content">
-                    <h3>Vinted: Finding Vintage Goods</h3>
-                    <p class="project-description">
-                        Vinted is a social App and Website that connects Vintage Lovers, Thrifters, and community builders to connect, share, and sell. Explore markets, Pop-Ups and local shops. 
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">FIGMA</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">View Project →</a>
-                        <a href="#" class="project-link">GitHub →</a>
-                    </div>
+                <div>
+                    <span class="project-status">In Development</span>
                 </div>
             </div>
+
+            <div class="project-item">
+                <div>
+                    <p class="project-num">03</p>
+                    <h3>Vinted</h3>
+                    <p>A social app and website connecting vintage lovers, thrifters, and community builders. Explore markets, pop-ups, and local shops — designed to make the secondhand economy more discoverable and social.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Figma</span>
+                    </div>
+                    <a href="#" class="project-link-btn">View Project →</a>
+                    <a href="#" class="project-link-btn">GitHub →</a>
+                </div>
+                <div>
+                    <span class="project-status">Concept</span>
+                </div>
+            </div>
+
         </div>
-    </main>
+    </div>
 
     <footer class="footer">
-        <p>&copy; 2024 Mason Campbell. All rights reserved.</p>
+        <p>&copy; 2025 Mason Campbell</p>
     </footer>
+
+    <!-- Spotify Widget -->
+    <div class="spotify-widget">
+        <button class="spotify-toggle" onclick="toggleSpotify()" aria-label="Toggle music player">
+            <span class="spotify-dot"></span>
+            <span>Now Playing</span>
+        </button>
+        <div class="spotify-embed" id="spotifyEmbed">
+            <iframe
+                src="https://open.spotify.com/embed/playlist/1gNgru36DnhHGredw99iIs?utm_source=generator&theme=0"
+                width="300"
+                height="80"
+                frameborder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        function toggleSpotify() {
+            const btn = document.querySelector('.spotify-toggle');
+            const embed = document.getElementById('spotifyEmbed');
+            embed.classList.toggle('open');
+            btn.classList.toggle('playing');
+        }
+    </script>
+
 </body>
 </html>
